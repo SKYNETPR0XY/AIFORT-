@@ -1,0 +1,34 @@
+  Run the Tool
+Install Required Packages: 
+    n the integrated terminal (with your virtual environment activated, if you created one), run:  
+
+ 1) pip install numpy scapy scikit-learn pillow fpdf hachoir 
+
+
+2)run: 
+python digital_forensics.py 
+
+ 
+
+
+
+
+
+   Execute the main script. You will be prompted to choose between the following options:
+        Analyze Network Traffic (PCAP)
+        Extract Metadata from File
+        Detect AI-Generated Synthetic Media
+        Generate PDF Report
+        Exit
+
+    Analyze Network Traffic
+    Upload a PCAP file for network traffic analysis. The tool will detect anomalies based on packet sizes and identify suspicious IP addresses.
+
+    Extract Metadata
+    Provide the path to any file (e.g., image, document) to extract metadata.
+
+    Detect Synthetic Media
+    Provide an image file path. The tool will predict if the image is synthetic (AI-generated) or genuine using a trained TensorFlow model.
+
+    Generate a PDF Report
+    After performing analysis, generate a detailed PDF report summarizing the results.

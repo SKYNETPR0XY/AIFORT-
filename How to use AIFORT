@@ -1,34 +1,109 @@
-  Run the Tool
-Install Required Packages: 
-    n the integrated terminal (with your virtual environment activated, if you created one), run:  
-
- 1) pip install numpy scapy scikit-learn pillow fpdf hachoir 
-
-
-2)run: 
-python digital_forensics.py 
-
- 
+Step-by-Step Instructions
+1. Download and Install VS Code
+Download VS Code:
+Visit code.visualstudio.com.
+Click Download for your operating system (Windows, Linux, or macOS).
+For Linux, choose the appropriate package (e.g., .deb for Ubuntu, .rpm for Fedora).
 
 
+Install VS Code:
+Windows: Run the downloaded .exe file and follow the setup wizard.
+Linux:
+Ubuntu: sudo dpkg -i code_*.deb
+Fedora: sudo rpm -i code_*.rpm
+macOS: Drag the .dmg file to the Applications folder.
+
+
+Verify Installation:
+Open VS Code by searching for “Visual Studio Code” in your applications menu or running code in a terminal.
+Ensure the welcome screen appears.
+2. Set Up Your Project Directory
+Create a Project Folder:
+Create a folder named aifort_project (e.g., C:\Users\YourName\aifort_project on Windows or ~/aifort_project on Linux/macOS).
+
+Add the Code:
+Download or copy the aifort.py script (provided separately).
+In VS Code, go to File > New File, paste the code, and save as aifort.py in aifort_project.
+Prepare Test Files:
+
+Create the following files in aifort_project for testing:
+test.txt: Content: Hello, World!
+photo.jpg: A JPEG image with EXIF data (e.g., from a camera or Unsplash).
+.hidden.txt: Content: Hidden file content (starts with a dot).
+log.txt: Content: 2025-05-06 10:00:00 Access from 192.168.1.1
+traffic.pcap: A sample PCAP file (download from Wireshark SampleCaptures).
+Create a subdirectory test_dir and copy test.txt and .hidden.txt:mkdir test_dir
+cp test.txt .hidden.txt test_dir/
+Terminal commands to create files:echo "Hello, World!" > test.txt
+echo "Hidden file content" > .hidden.txt
+echo "2025-05-06 10:00:00 Access from 192.168.1.1" > log.txt
+
+3. Install Dependencies
+Install Python 3.8+:
+Download from python.org.
+Install, ensuring “Add Python to PATH” is checked (Windows).
+Verify:python --version
+Output should show Python 3.8 or higher.
+Install Python Extension in VS Code:
+In VS Code, go to the Extensions view (Ctrl+Shift+X or Cmd+Shift+X on macOS).
+Search for “Python” (by Microsoft) and click Install.
+Install Python Libraries:
+Open the VS Code terminal (Terminal > New Terminal or `Ctrl+``).
+Update pip:python -m pip install --upgrade pip
+Install scapy and Pillow:pip install scapy Pillow
+Verify:pip show scapy
+pip show Pillow
+Install LaTeX for PDF Reports:
+Windows:
+Download MiKTeX from miktex.org.
+Install, selecting “Install missing packages on-the-fly”.
+Linux:
+Install TeX Live:sudo apt-get update
+sudo apt-get install texlive-full latexmk
+macOS:
+Install MacTeX:brew install mactex
+Install latexmk:sudo tlmgr install latexmk
+Verify latexmk:latexmk --version
+
+4. Configure VS Code
+Set Python Interpreter:
+Open VS Code and load aifort_project (File > Open Folder).
+Press Ctrl+Shift+P, type Python: Select Interpreter, and choose your Python 3.8+ installation (e.g., Python 3.10.12).
+Verify in terminal:python --version
+Check Terminal Shell:
+Windows: Use Command Prompt or PowerShell (default).
+Linux/macOS: Use Bash or Zsh.
+Adjust: Terminal > Configure Terminal Settings.
 
 
 
-   Execute the main script. You will be prompted to choose between the following options:
-        Analyze Network Traffic (PCAP)
-        Extract Metadata from File
-        Detect AI-Generated Synthetic Media
-        Generate PDF Report
-        Exit
+5. Run the Code
+Open aifort.py:
+In VS Code, open aifort.py from aifort_project.
+Run the Script:
+Option 1: Click the “Run” button (triangle, top-right) or press F5.
+Option 2: In the terminal, navigate to aifort_project:cd /path/to/aifort_project
+Run:python aifort.py
 
-    Analyze Network Traffic
-    Upload a PCAP file for network traffic analysis. The tool will detect anomalies based on packet sizes and identify suspicious IP addresses.
 
-    Extract Metadata
-    Provide the path to any file (e.g., image, document) to extract metadata.
 
-    Detect Synthetic Media
-    Provide an image file path. The tool will predict if the image is synthetic (AI-generated) or genuine using a trained TensorFlow model.
 
-    Generate a PDF Report
-    After performing analysis, generate a detailed PDF report summarizing the results.
+
+
+
+
+Interact with the Menu:
+The tool displays a menu:=== AIFORT: AI-Enhanced Intelligence Forensic Tool ===
+1. File Hashing
+2. File Metadata Extraction (Advanced)
+3. File Signature Analysis
+4. Keyword Search
+5. Timeline Analysis
+6. Hidden File Detection
+7. Log File Parser
+8. Generate PDF Report
+9. Analyze Network Traffic (PCAP)
+10. DeepSeek Chat Assistance
+11. Open AI Chat Assistance
+12. Exit
+Enter a number (1-12) to select an option

@@ -1,9 +1,14 @@
 # AIFORT-
-AIFORT Digital Forensics Analysis Tool  
 
-This repository contains a Python-based Digital Forensics Analysis Tool designed to help security researchers and digital forensics professionals with various types of analysis, including network traffic analysis, metadata extraction, and synthetic media detection.
+AIFORT: AI-Enhanced Intelligence Forensic Tool
+AIFORT is a Python-based digital forensic tool that provides 12 analysis options, including file hashing, metadata extraction, keyword search,
+timeline analysis, hidden file detection, log parsing, network traffic analysis, PDF report generation, and simulated AI chat assistance
+(DeepSeek and Open AI). This README explains how to download Visual Studio Code (VS Code) and run the aifort.py script on Window
 
-. Network Traffic Analysis (PCAP)
+
+
+
+ 1. Network Traffic Analysis (PCAP)
 
     Analyzes PCAP files to detect anomalies in network traffic using machine learning techniques (Isolation Forest for anomaly detection).
     Identifies suspicious IP addresses by counting packet frequency and comparing it to a predefined threshold.
